@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>ORIGINAL WAGNER'S TRATTORIA PIZZERIA</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="./icons/pizza-icon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body onload="renderMenuBox()">
+    <header>
+        <div class="logo-container">
+            <img class="previous-icon-header" src="./icons/previous-icon-white.svg" alt="">
+            <h1>Lieferando.de</h1>
+        </div>
+        <p class="location">Raitestraße 260, 71638 Stuttgart</p>
+        <div class="navigation-container">
+            <img onclick="showMobileBasket()" class="shopping-basket-icon" src="./icons/shopping-basket-white.svg" alt="">
+            <img class="burger-menu-icon" src="./icons/burger-menu.svg" alt="">
+        </div>
+    </header>
+
+
+
+    <div class="main-container">
+
+        <div class="menu-container">
+
+            <img class="pizza-banner" src="./img/pizza-banner.jpg" alt="Banner mit einer Pizza">
+
+            <div class="restaurant-info-container">
+                <div class="restaurant-name-container">
+                    <h1>Original Wagner's Trattoria Pizzeria</h1>
+                    <div class="icon-container">
+                        <div class="info-icon-container"><img src="./icons/info-icon.svg" alt=""></div>
+                        <div class="like-icon-container"><img onclick="changeLikeIcon()" id="like-icon"
+                                src="./icons/like-icon.svg" alt=""></div>
+                    </div>
+                </div>
+                <div class="rating-container">
+                    <img src="./icons/ratingstar.svg" alt="">
+                    <img src="./icons/ratingstar.svg" alt="">
+                    <img src="./icons/ratingstar.svg" alt="">
+                    <img src="./icons/ratingstar.svg" alt="">
+                    <img src="./icons/ratingstar-half.svg" alt="">
+                    <a href="#">(14,6k Bewertungen)</a>
+                </div>
+                <div class="individual-text-container">
+                    <p>Buon Appetito!</p>
+                </div>
+            </div>
+
+            <div class="search-container">
+                <img src="./icons/search-icon.svg" alt="">
+                <img src="./icons/previous-icon.svg" alt="">
+                <a href="#">Beliebte Gerichte</a>
+                <a href="#">Vorspeisen</a>
+                <a href="#">Salate</a>
+                <a href="#">Pizza</a>
+                <a class="pizzabrot" href="#">Pizzabrot</a>
+                <a class="pasta" href="#">Pasta</a>
+                <a class="pasta-al-forno" href="#">Pasta al Forno</a>
+                <a class="desserts" href="#">Desserts</a>
+                <img src="./icons/next-icon.svg" alt="">
+            </div>
+
+            <div class="add-menu-container">
+                <div class="menu-headline-container">
+                    <h2>Beliebte Gerichte</h2>
+                </div>
+                <!-- Wird durch JS gefüllt -->
+                <div id="content-menu-box"></div>
+            </div>
+
+        </div>
+        <div class="shopping-basket-container">
+            <h3 class="shopping-basket-headline">Warenkorb</h3>
+            <div id="content-basket">
+                
+            </div>
+        </div>
+    </div>
+
+
+
+    <div onclick="showMobileBasket(); renderMobileBasket()" class="mobile-basket-button">
+        <p id="mobile-button">Warenkorb</p>
+    </div>
+
+    <div id="mobile-basket-container" class="mobile-basket-container">
+        <div class="header-mobile-basket-container">
+            <h3 class="shopping-basket-headline">Warenkorb</h3>
+            <img onclick="closeMobileBasket()" class="close-icon" src="./icons/x.png" alt="">
+        </div>
+        <div id="mobile-basket-content"></div>
+        <div onclick="closeMobileBasket()" class="mobile-basket-button">
+            <p>Weitere Produkte hinzufügen</p>
+        </div>
+    </div>
+
+
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
